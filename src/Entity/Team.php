@@ -5,9 +5,13 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\TeamRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     normalizationContext={"groups"={"read", "team"}},
+ *     denormalizationContext={"groups"={"write"}}
+ * )
  * @ORM\Entity(repositoryClass=TeamRepository::class)
  */
 class Team
@@ -16,34 +20,29 @@ class Team
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     */
-    private $id;
-
-    /**
-     * @ORM\Column(type="integer")
+     * @Groups("read")
      */
     private $team_id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"read", "write"})
      */
     private $name;
 
     /**
      * @ORM\ManyToOne(targetEntity=Player::class, inversedBy="teams_1")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=false, referencedColumnName="player_id")
+     * @Groups({"read", "write"})
      */
     private $player_1;
 
     /**
      * @ORM\ManyToOne(targetEntity=Player::class, inversedBy="teams_2")
+     * @ORM\JoinColumn(referencedColumnName="player_id")
+     * @Groups({"read", "write"})
      */
     private $player_2;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
 
     public function getTeamId(): ?int
     {

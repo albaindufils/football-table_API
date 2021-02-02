@@ -7,9 +7,13 @@ use App\Repository\PlayerRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     normalizationContext={"groups"={"read"}},
+ *     denormalizationContext={"groups"={"write"}}
+ * )
  * @ORM\Entity(repositoryClass=PlayerRepository::class)
  */
 class Player
@@ -18,26 +22,25 @@ class Player
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     */
-    private $id;
-
-    /**
-     * @ORM\Column(type="integer")
+     * @Groups("read")
      */
     private $player_id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"read", "write"})
      */
     private $name;
 
     /**
      * @ORM\OneToMany(targetEntity=Team::class, mappedBy="player_1")
+     * @Groups({"read"})
      */
     private $teams_1;
 
     /**
      * @ORM\OneToMany(targetEntity=Team::class, mappedBy="player_2")
+     * @Groups({"read"})
      */
     private $teams_2;
 
