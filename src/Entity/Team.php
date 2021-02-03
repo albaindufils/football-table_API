@@ -5,13 +5,9 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\TeamRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource(
- *     normalizationContext={"groups"={"read", "team"}},
- *     denormalizationContext={"groups"={"write"}}
- * )
+ * @ApiResource
  * @ORM\Entity(repositoryClass=TeamRepository::class)
  */
 class Team
@@ -19,76 +15,63 @@ class Team
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     * @Groups("read")
+     * @ORM\Column(type="integer", unique=true)
      */
-    private $team_id;
+    private int $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @Groups({"read", "write"})
+     * @ORM\Column(type="string", length=255, unique=true, nullable=false)
      */
-    private $name;
+    private string $name;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Player::class, inversedBy="teams_1")
-     * @ORM\JoinColumn(nullable=false, referencedColumnName="player_id")
-     * @Groups({"read", "write"})
+     * @ORM\ManyToOne(targetEntity=Player::class)
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $player_1;
+    private Player $player1;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Player::class, inversedBy="teams_2")
-     * @ORM\JoinColumn(referencedColumnName="player_id")
-     * @Groups({"read", "write"})
+     * @ORM\ManyToOne(targetEntity=Player::class)
+     * @ORM\JoinColumn(nullable=true)
      */
-    private $player_2;
+    private ?Player $player2;
 
-    public function getTeamId(): ?int
+    public function __construct() { }
+
+    public function getId(): int
     {
-        return $this->team_id;
+        return $this->id;
     }
 
-    public function setTeamId(int $team_id): self
-    {
-        $this->team_id = $team_id;
-
-        return $this;
-    }
-
-    public function getName(): ?string
+    public function getName(): string
     {
         return $this->name;
     }
 
-    public function setName(string $name): self
+    public function getPlayer1(): Player
     {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    public function getPlayer1(): ?Player
-    {
-        return $this->player_1;
-    }
-
-    public function setPlayer1(?Player $player_1): self
-    {
-        $this->player_1 = $player_1;
-
-        return $this;
+        return $this->player1;
     }
 
     public function getPlayer2(): ?Player
     {
-        return $this->player_2;
+        return $this->player2;
     }
 
-    public function setPlayer2(?Player $player_2): self
+    public function setPlayer1(Player $player1): self
     {
-        $this->player_2 = $player_2;
-
+        $this->player1 = $player1;
         return $this;
+    }
+
+    public function setPlayer2(?Player $player2): self
+    {
+        $this->player2 = $player2;
+        return $this;
+    }
+
+    public function setName(string $name)
+    {
+        $this->name = $name;
     }
 }

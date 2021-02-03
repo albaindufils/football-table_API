@@ -8,10 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource(
- *     normalizationContext={"groups"={"read"}},
- *     denormalizationContext={"groups"={"write"}}
- * )
+ * @ApiResource
  * @ORM\Entity(repositoryClass=GameRepository::class)
  */
 class Game
@@ -20,111 +17,93 @@ class Game
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups("read")
      */
-    private $game_id;
+    private int $id;
 
     /**
      * @ORM\Column(type="datetime")
-     * @Groups({"read", "write"})
      */
-    private $datetime;
+    private \DateTimeInterface $datetime;
 
     /**
      * @ORM\Column(type="integer")
-     * @Groups({"read", "write"})
      */
-    private $score_home;
+    private int $scoreHome;
 
     /**
      * @ORM\Column(type="integer")
-     * @Groups({"read", "write"})
      */
-    private $score_away;
+    private int $scoreAway;
 
     /**
      * @ORM\ManyToOne(targetEntity=Team::class)
-     * @ORM\JoinColumn(nullable=false, referencedColumnName="team_id")
-     * @Groups({"read", "write"})
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $team_home;
+    private Team $teamHome;
 
     /**
      * @ORM\ManyToOne(targetEntity=Team::class)
-     * @ORM\JoinColumn(nullable=false, referencedColumnName="team_id")
-     * @Groups({"read", "write"})
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $team_away;
+    private Team $teamAway;
 
-    public function getGameId(): ?int
+    public function __construct() { }
+
+    public function getId(): int
     {
-        return $this->game_id;
+        return $this->id;
     }
 
-    public function setGameId(int $game_id): self
+    public function getScoreHome(): int
     {
-        $this->game_id = $game_id;
-
-        return $this;
+        return $this->scoreHome;
     }
 
-    public function getDatetime(): ?\DateTimeInterface
+    public function getScoreAway(): int
+    {
+        return $this->scoreAway;
+    }
+
+    public function getTeamHome(): Team
+    {
+        return $this->teamHome;
+    }
+
+    public function getTeamAway(): Team
+    {
+        return $this->teamAway;
+    }
+
+    public function getDatetime(): \DateTimeInterface
     {
         return $this->datetime;
     }
 
-    public function setDatetime(\DateTimeInterface $datetime): self
+    public function setScoreHome(int $scoreHome): void
+    {
+        $this->scoreHome = $scoreHome;
+    }
+
+    public function setScoreAway(int $scoreAway): void
+    {
+        $this->scoreAway = $scoreAway;
+    }
+
+    public function setTeamHome(Team $teamHome): void
+    {
+        $this->teamHome = $teamHome;
+    }
+
+    public function setTeamAway(Team $teamAway): void
+    {
+        $this->teamAway = $teamAway;
+    }
+
+    public function setDatetime(\DateTimeInterface $datetime): void
     {
         $this->datetime = $datetime;
-
-        return $this;
     }
 
-    public function getScoreHome(): ?int
-    {
-        return $this->score_home;
-    }
 
-    public function setScoreHome(string $score_home): self
-    {
-        $this->score_home = $score_home;
 
-        return $this;
-    }
-
-    public function getScoreAway(): ?int
-    {
-        return $this->score_away;
-    }
-
-    public function setScoreAway(int $score_away): self
-    {
-        $this->score_away = $score_away;
-
-        return $this;
-    }
-
-    public function getTeamHome(): ?Team
-    {
-        return $this->team_home;
-    }
-
-    public function setTeamHome(?Team $team_home): self
-    {
-        $this->team_home = $team_home;
-
-        return $this;
-    }
-
-    public function getTeamAway(): ?Team
-    {
-        return $this->team_away;
-    }
-
-    public function setTeamAway(?Team $team_away): self
-    {
-        $this->team_away = $team_away;
-
-        return $this;
-    }
 }
