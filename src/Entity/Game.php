@@ -3,47 +3,56 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
-use App\Repository\GameRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource
- * @ORM\Entity(repositoryClass=GameRepository::class)
+ * @ApiResource(
+ *     normalizationContext={"groups"={"game:read", "team:read"}},
+ *     denormalizationContext={"groups"={"game:write"}},
+ * )
+ * @ORM\Entity
  */
 class Game
 {
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", unique=true)
+     * @Groups({"game:read"})
      */
     private int $id;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Groups({"game:read", "game:write"})
      */
     private \DateTimeInterface $datetime;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"game"})
+     * @Groups({"game:read", "game:write"})
      */
     private int $scoreHome;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"game:read", "game:write"})
      */
     private int $scoreAway;
 
     /**
      * @ORM\ManyToOne(targetEntity=Team::class)
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"team:read","game:read", "game:write"})
      */
     private Team $teamHome;
 
     /**
      * @ORM\ManyToOne(targetEntity=Team::class)
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"team:read","game:read", "game:write"})
      */
     private Team $teamAway;
 

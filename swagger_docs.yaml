@@ -1,0 +1,888 @@
+openapi: 3.0.3
+info:
+  title: ''
+  description: ''
+  version: 0.0.0
+servers:
+  -
+    url: /
+    description: ''
+paths:
+  '/api/games/{id}':
+    get:
+      operationId: getGameItem
+      tags:
+        - Game
+      responses:
+        200:
+          description: 'Game resource'
+          content:
+            application/ld+json:
+              schema:
+                $ref: '#/components/schemas/Game.jsonld'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Game'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Game'
+        404:
+          description: 'Resource not found'
+      summary: 'Retrieves a Game resource.'
+      description: 'Retrieves a Game resource.'
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Resource identifier'
+          required: true
+          deprecated: false
+          schema:
+            type: string
+          style: simple
+      deprecated: false
+    put:
+      operationId: putGameItem
+      tags:
+        - Game
+      responses:
+        200:
+          description: 'Game resource updated'
+          content:
+            application/ld+json:
+              schema:
+                $ref: '#/components/schemas/Game.jsonld'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Game'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Game'
+          links:
+            GetGameItem:
+              operationId: getGameItem
+              parameters:
+                id: '$response.body#/id'
+              requestBody: []
+              description: 'The `id` value returned in the response can be used as the `id` parameter in `GET /api/games/{id}`.'
+        400:
+          description: 'Invalid input'
+        404:
+          description: 'Resource not found'
+      summary: 'Replaces the Game resource.'
+      description: 'Replaces the Game resource.'
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Resource identifier'
+          required: true
+          deprecated: false
+          schema:
+            type: string
+          style: simple
+      requestBody:
+        description: 'The updated Game resource'
+        content:
+          application/ld+json:
+            schema:
+              $ref: '#/components/schemas/Game.jsonld'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Game'
+          text/html:
+            schema:
+              $ref: '#/components/schemas/Game'
+        required: true
+      deprecated: false
+    delete:
+      operationId: deleteGameItem
+      tags:
+        - Game
+      responses:
+        204:
+          description: 'Game resource deleted'
+        404:
+          description: 'Resource not found'
+      summary: 'Removes the Game resource.'
+      description: 'Removes the Game resource.'
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Resource identifier'
+          required: true
+          deprecated: false
+          schema:
+            type: string
+          style: simple
+      deprecated: false
+    patch:
+      operationId: patchGameItem
+      tags:
+        - Game
+      responses:
+        200:
+          description: 'Game resource updated'
+          content:
+            application/ld+json:
+              schema:
+                $ref: '#/components/schemas/Game.jsonld'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Game'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Game'
+          links:
+            GetGameItem:
+              operationId: getGameItem
+              parameters:
+                id: '$response.body#/id'
+              requestBody: []
+              description: 'The `id` value returned in the response can be used as the `id` parameter in `GET /api/games/{id}`.'
+        400:
+          description: 'Invalid input'
+        404:
+          description: 'Resource not found'
+      summary: 'Updates the Game resource.'
+      description: 'Updates the Game resource.'
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Resource identifier'
+          required: true
+          deprecated: false
+          schema:
+            type: string
+          style: simple
+      requestBody:
+        description: 'The updated Game resource'
+        content:
+          application/merge-patch+json:
+            schema:
+              $ref: '#/components/schemas/Game'
+        required: true
+      deprecated: false
+    parameters: []
+  /api/games:
+    get:
+      operationId: getGameCollection
+      tags:
+        - Game
+      responses:
+        200:
+          description: 'Game collection'
+          content:
+            application/ld+json:
+              schema:
+                type: object
+                properties:
+                  'hydra:member': { type: array, items: { $ref: '#/components/schemas/Game.jsonld' } }
+                  'hydra:totalItems': { type: integer, minimum: 0 }
+                  'hydra:view': { type: object, properties: { '@id': { type: string, format: iri-reference }, '@type': { type: string }, 'hydra:first': { type: string, format: iri-reference }, 'hydra:last': { type: string, format: iri-reference }, 'hydra:next': { type: string, format: iri-reference } } }
+                  'hydra:search': { type: object, properties: { '@type': { type: string }, 'hydra:template': { type: string }, 'hydra:variableRepresentation': { type: string }, 'hydra:mapping': { type: array, items: { type: object, properties: { '@type': { type: string }, variable: { type: string }, property: { type: string, nullable: true }, required: { type: boolean } } } } } }
+                required:
+                  - 'hydra:member'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Game'
+            text/html:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Game'
+      summary: 'Retrieves the collection of Game resources.'
+      description: 'Retrieves the collection of Game resources.'
+      parameters: []
+      deprecated: false
+    post:
+      operationId: postGameCollection
+      tags:
+        - Game
+      responses:
+        201:
+          description: 'Game resource created'
+          content:
+            application/ld+json:
+              schema:
+                $ref: '#/components/schemas/Game.jsonld'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Game'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Game'
+          links:
+            GetGameItem:
+              operationId: getGameItem
+              parameters:
+                id: '$response.body#/id'
+              requestBody: []
+              description: 'The `id` value returned in the response can be used as the `id` parameter in `GET /api/games/{id}`.'
+        400:
+          description: 'Invalid input'
+      summary: 'Creates a Game resource.'
+      description: 'Creates a Game resource.'
+      parameters: []
+      requestBody:
+        description: 'The new Game resource'
+        content:
+          application/ld+json:
+            schema:
+              $ref: '#/components/schemas/Game.jsonld'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Game'
+          text/html:
+            schema:
+              $ref: '#/components/schemas/Game'
+        required: true
+      deprecated: false
+    parameters: []
+  '/api/players/{id}':
+    get:
+      operationId: getPlayerItem
+      tags:
+        - Player
+      responses:
+        200:
+          description: 'Player resource'
+          content:
+            application/ld+json:
+              schema:
+                $ref: '#/components/schemas/Player.jsonld-player'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Player-player'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Player-player'
+        404:
+          description: 'Resource not found'
+      summary: 'Retrieves a Player resource.'
+      description: 'Retrieves a Player resource.'
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Resource identifier'
+          required: true
+          deprecated: false
+          schema:
+            type: string
+          style: simple
+      deprecated: false
+    put:
+      operationId: putPlayerItem
+      tags:
+        - Player
+      responses:
+        200:
+          description: 'Player resource updated'
+          content:
+            application/ld+json:
+              schema:
+                $ref: '#/components/schemas/Player.jsonld-player'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Player-player'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Player-player'
+          links:
+            GetPlayerItem:
+              operationId: getPlayerItem
+              parameters:
+                id: '$response.body#/id'
+              requestBody: []
+              description: 'The `id` value returned in the response can be used as the `id` parameter in `GET /api/players/{id}`.'
+        400:
+          description: 'Invalid input'
+        404:
+          description: 'Resource not found'
+      summary: 'Replaces the Player resource.'
+      description: 'Replaces the Player resource.'
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Resource identifier'
+          required: true
+          deprecated: false
+          schema:
+            type: string
+          style: simple
+      requestBody:
+        description: 'The updated Player resource'
+        content:
+          application/ld+json:
+            schema:
+              $ref: '#/components/schemas/Player.jsonld'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Player'
+          text/html:
+            schema:
+              $ref: '#/components/schemas/Player'
+        required: true
+      deprecated: false
+    delete:
+      operationId: deletePlayerItem
+      tags:
+        - Player
+      responses:
+        204:
+          description: 'Player resource deleted'
+        404:
+          description: 'Resource not found'
+      summary: 'Removes the Player resource.'
+      description: 'Removes the Player resource.'
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Resource identifier'
+          required: true
+          deprecated: false
+          schema:
+            type: string
+          style: simple
+      deprecated: false
+    patch:
+      operationId: patchPlayerItem
+      tags:
+        - Player
+      responses:
+        200:
+          description: 'Player resource updated'
+          content:
+            application/ld+json:
+              schema:
+                $ref: '#/components/schemas/Player.jsonld-player'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Player-player'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Player-player'
+          links:
+            GetPlayerItem:
+              operationId: getPlayerItem
+              parameters:
+                id: '$response.body#/id'
+              requestBody: []
+              description: 'The `id` value returned in the response can be used as the `id` parameter in `GET /api/players/{id}`.'
+        400:
+          description: 'Invalid input'
+        404:
+          description: 'Resource not found'
+      summary: 'Updates the Player resource.'
+      description: 'Updates the Player resource.'
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Resource identifier'
+          required: true
+          deprecated: false
+          schema:
+            type: string
+          style: simple
+      requestBody:
+        description: 'The updated Player resource'
+        content:
+          application/merge-patch+json:
+            schema:
+              $ref: '#/components/schemas/Player'
+        required: true
+      deprecated: false
+    parameters: []
+  /api/players:
+    get:
+      operationId: getPlayerCollection
+      tags:
+        - Player
+      responses:
+        200:
+          description: 'Player collection'
+          content:
+            application/ld+json:
+              schema:
+                type: object
+                properties:
+                  'hydra:member': { type: array, items: { $ref: '#/components/schemas/Player.jsonld-player' } }
+                  'hydra:totalItems': { type: integer, minimum: 0 }
+                  'hydra:view': { type: object, properties: { '@id': { type: string, format: iri-reference }, '@type': { type: string }, 'hydra:first': { type: string, format: iri-reference }, 'hydra:last': { type: string, format: iri-reference }, 'hydra:next': { type: string, format: iri-reference } } }
+                  'hydra:search': { type: object, properties: { '@type': { type: string }, 'hydra:template': { type: string }, 'hydra:variableRepresentation': { type: string }, 'hydra:mapping': { type: array, items: { type: object, properties: { '@type': { type: string }, variable: { type: string }, property: { type: string, nullable: true }, required: { type: boolean } } } } } }
+                required:
+                  - 'hydra:member'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Player-player'
+            text/html:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Player-player'
+      summary: 'Retrieves the collection of Player resources.'
+      description: 'Retrieves the collection of Player resources.'
+      parameters: []
+      deprecated: false
+    post:
+      operationId: postPlayerCollection
+      tags:
+        - Player
+      responses:
+        201:
+          description: 'Player resource created'
+          content:
+            application/ld+json:
+              schema:
+                $ref: '#/components/schemas/Player.jsonld-player'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Player-player'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Player-player'
+          links:
+            GetPlayerItem:
+              operationId: getPlayerItem
+              parameters:
+                id: '$response.body#/id'
+              requestBody: []
+              description: 'The `id` value returned in the response can be used as the `id` parameter in `GET /api/players/{id}`.'
+        400:
+          description: 'Invalid input'
+      summary: 'Creates a Player resource.'
+      description: 'Creates a Player resource.'
+      parameters: []
+      requestBody:
+        description: 'The new Player resource'
+        content:
+          application/ld+json:
+            schema:
+              $ref: '#/components/schemas/Player.jsonld'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Player'
+          text/html:
+            schema:
+              $ref: '#/components/schemas/Player'
+        required: true
+      deprecated: false
+    parameters: []
+  '/api/teams/{id}':
+    get:
+      operationId: getTeamItem
+      tags:
+        - Team
+      responses:
+        200:
+          description: 'Team resource'
+          content:
+            application/ld+json:
+              schema:
+                $ref: '#/components/schemas/Team.jsonld-player'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Team-player'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Team-player'
+        404:
+          description: 'Resource not found'
+      summary: 'Retrieves a Team resource.'
+      description: 'Retrieves a Team resource.'
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Resource identifier'
+          required: true
+          deprecated: false
+          schema:
+            type: string
+          style: simple
+      deprecated: false
+    put:
+      operationId: putTeamItem
+      tags:
+        - Team
+      responses:
+        200:
+          description: 'Team resource updated'
+          content:
+            application/ld+json:
+              schema:
+                $ref: '#/components/schemas/Team.jsonld-player'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Team-player'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Team-player'
+          links:
+            GetTeamItem:
+              operationId: getTeamItem
+              parameters:
+                id: '$response.body#/id'
+              requestBody: []
+              description: 'The `id` value returned in the response can be used as the `id` parameter in `GET /api/teams/{id}`.'
+        400:
+          description: 'Invalid input'
+        404:
+          description: 'Resource not found'
+      summary: 'Replaces the Team resource.'
+      description: 'Replaces the Team resource.'
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Resource identifier'
+          required: true
+          deprecated: false
+          schema:
+            type: string
+          style: simple
+      requestBody:
+        description: 'The updated Team resource'
+        content:
+          application/ld+json:
+            schema:
+              $ref: '#/components/schemas/Team.jsonld'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Team'
+          text/html:
+            schema:
+              $ref: '#/components/schemas/Team'
+        required: true
+      deprecated: false
+    delete:
+      operationId: deleteTeamItem
+      tags:
+        - Team
+      responses:
+        204:
+          description: 'Team resource deleted'
+        404:
+          description: 'Resource not found'
+      summary: 'Removes the Team resource.'
+      description: 'Removes the Team resource.'
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Resource identifier'
+          required: true
+          deprecated: false
+          schema:
+            type: string
+          style: simple
+      deprecated: false
+    patch:
+      operationId: patchTeamItem
+      tags:
+        - Team
+      responses:
+        200:
+          description: 'Team resource updated'
+          content:
+            application/ld+json:
+              schema:
+                $ref: '#/components/schemas/Team.jsonld-player'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Team-player'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Team-player'
+          links:
+            GetTeamItem:
+              operationId: getTeamItem
+              parameters:
+                id: '$response.body#/id'
+              requestBody: []
+              description: 'The `id` value returned in the response can be used as the `id` parameter in `GET /api/teams/{id}`.'
+        400:
+          description: 'Invalid input'
+        404:
+          description: 'Resource not found'
+      summary: 'Updates the Team resource.'
+      description: 'Updates the Team resource.'
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Resource identifier'
+          required: true
+          deprecated: false
+          schema:
+            type: string
+          style: simple
+      requestBody:
+        description: 'The updated Team resource'
+        content:
+          application/merge-patch+json:
+            schema:
+              $ref: '#/components/schemas/Team'
+        required: true
+      deprecated: false
+    parameters: []
+  /api/teams:
+    get:
+      operationId: getTeamCollection
+      tags:
+        - Team
+      responses:
+        200:
+          description: 'Team collection'
+          content:
+            application/ld+json:
+              schema:
+                type: object
+                properties:
+                  'hydra:member': { type: array, items: { $ref: '#/components/schemas/Team.jsonld-player' } }
+                  'hydra:totalItems': { type: integer, minimum: 0 }
+                  'hydra:view': { type: object, properties: { '@id': { type: string, format: iri-reference }, '@type': { type: string }, 'hydra:first': { type: string, format: iri-reference }, 'hydra:last': { type: string, format: iri-reference }, 'hydra:next': { type: string, format: iri-reference } } }
+                  'hydra:search': { type: object, properties: { '@type': { type: string }, 'hydra:template': { type: string }, 'hydra:variableRepresentation': { type: string }, 'hydra:mapping': { type: array, items: { type: object, properties: { '@type': { type: string }, variable: { type: string }, property: { type: string, nullable: true }, required: { type: boolean } } } } } }
+                required:
+                  - 'hydra:member'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Team-player'
+            text/html:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Team-player'
+      summary: 'Retrieves the collection of Team resources.'
+      description: 'Retrieves the collection of Team resources.'
+      parameters: []
+      deprecated: false
+    post:
+      operationId: postTeamCollection
+      tags:
+        - Team
+      responses:
+        201:
+          description: 'Team resource created'
+          content:
+            application/ld+json:
+              schema:
+                $ref: '#/components/schemas/Team.jsonld-player'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Team-player'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Team-player'
+          links:
+            GetTeamItem:
+              operationId: getTeamItem
+              parameters:
+                id: '$response.body#/id'
+              requestBody: []
+              description: 'The `id` value returned in the response can be used as the `id` parameter in `GET /api/teams/{id}`.'
+        400:
+          description: 'Invalid input'
+      summary: 'Creates a Team resource.'
+      description: 'Creates a Team resource.'
+      parameters: []
+      requestBody:
+        description: 'The new Team resource'
+        content:
+          application/ld+json:
+            schema:
+              $ref: '#/components/schemas/Team.jsonld'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Team'
+          text/html:
+            schema:
+              $ref: '#/components/schemas/Team'
+        required: true
+      deprecated: false
+    parameters: []
+components:
+  schemas:
+    Game.jsonld:
+      type: object
+      description: ''
+      properties:
+        '@context':
+          readOnly: true
+          type: string
+        '@id':
+          readOnly: true
+          type: string
+        '@type':
+          readOnly: true
+          type: string
+        id:
+          readOnly: true
+          type: integer
+        datetime:
+          type: string
+          format: date-time
+        scoreHome:
+          type: integer
+        scoreAway:
+          type: integer
+        teamHome:
+          type: string
+          format: iri-reference
+        teamAway:
+          type: string
+          format: iri-reference
+    Game:
+      type: object
+      description: ''
+      properties:
+        id:
+          readOnly: true
+          type: integer
+        datetime:
+          type: string
+          format: date-time
+        scoreHome:
+          type: integer
+        scoreAway:
+          type: integer
+        teamHome:
+          type: string
+          format: iri-reference
+        teamAway:
+          type: string
+          format: iri-reference
+    Player.jsonld-player:
+      type: object
+      description: ''
+      properties:
+        '@context':
+          readOnly: true
+          type: string
+        '@id':
+          readOnly: true
+          type: string
+        '@type':
+          readOnly: true
+          type: string
+        id:
+          readOnly: true
+          type: integer
+        name:
+          type: string
+    Player-player:
+      type: object
+      description: ''
+      properties:
+        id:
+          readOnly: true
+          type: integer
+        name:
+          type: string
+    Player.jsonld:
+      type: object
+      description: ''
+      properties:
+        '@context':
+          readOnly: true
+          type: string
+        '@id':
+          readOnly: true
+          type: string
+        '@type':
+          readOnly: true
+          type: string
+        id:
+          readOnly: true
+          type: integer
+        name:
+          type: string
+    Player:
+      type: object
+      description: ''
+      properties:
+        id:
+          readOnly: true
+          type: integer
+        name:
+          type: string
+    Team.jsonld-player:
+      type: object
+      description: ''
+      properties:
+        '@context':
+          readOnly: true
+          type: string
+        '@id':
+          readOnly: true
+          type: string
+        '@type':
+          readOnly: true
+          type: string
+        player1:
+          $ref: '#/components/schemas/Player.jsonld-player'
+    Team-player:
+      type: object
+      description: ''
+      properties:
+        player1:
+          $ref: '#/components/schemas/Player-player'
+    Team.jsonld:
+      type: object
+      description: ''
+      properties:
+        '@context':
+          readOnly: true
+          type: string
+        '@id':
+          readOnly: true
+          type: string
+        '@type':
+          readOnly: true
+          type: string
+        name:
+          writeOnly: true
+          type: string
+        player1:
+          $ref: '#/components/schemas/Player.jsonld'
+        player2:
+          writeOnly: true
+          nullable: true
+          anyOf:
+            -
+              $ref: '#/components/schemas/Player.jsonld'
+    Team:
+      type: object
+      description: ''
+      properties:
+        name:
+          writeOnly: true
+          type: string
+        player1:
+          $ref: '#/components/schemas/Player'
+        player2:
+          writeOnly: true
+          nullable: true
+          anyOf:
+            -
+              $ref: '#/components/schemas/Player'
+  responses: {  }
+  parameters: {  }
+  examples: {  }
+  requestBodies: {  }
+  headers: {  }
+  securitySchemes: {  }
+security: []
+tags: []

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="de131ac8-d75b-46f7-b5ed-5eb7dfe39206" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/TeamRankingController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/TeamRanking.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/TeamRankingRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/GameController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PlayerController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TeamController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Player.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Team.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Team.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/GameRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/GameRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PlayerRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/TeamRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/core" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/cors-bundle" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/vendor/symfony/proxy-manager-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1nvaPZGgqwmJRQDahSYoZlLTFfI" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/table-football_API" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Albain\REPOSITORY\PRIVATE\Audacia\table-football_API\src\Controller" />
+      <recent name="C:\Users\Albain\REPOSITORY\PRIVATE\Audacia\table-football_API\src\Controller\Team" />
+      <recent name="C:\Users\Albain\REPOSITORY\PRIVATE\Audacia\table-football_API\src\Controller\Player" />
+      <recent name="C:\Users\Albain\REPOSITORY\PRIVATE\Audacia\table-football_API\src\Controller\Game" />
+      <recent name="C:\Users\Albain\REPOSITORY\PRIVATE\Audacia\table-football_API\src\Entity\old" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de131ac8-d75b-46f7-b5ed-5eb7dfe39206" name="Default Changelist" comment="" />
+      <created>1612272996028</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612272996028</updated>
+      <workItem from="1612272997119" duration="8095000" />
+      <workItem from="1612281997561" duration="4564000" />
+      <workItem from="1612286803981" duration="13185000" />
+      <workItem from="1612341726387" duration="6629000" />
+      <workItem from="1612355753784" duration="2258000" />
+      <workItem from="1612434234507" duration="667000" />
+      <workItem from="1612531334405" duration="4231000" />
+      <workItem from="1612696132891" duration="3386000" />
+      <workItem from="1612708646579" duration="1299000" />
+      <workItem from="1612775975223" duration="7394000" />
+      <workItem from="1612856756642" duration="3575000" />
+      <workItem from="1612960131382" duration="2502000" />
+      <workItem from="1613052441748" duration="2414000" />
+      <workItem from="1613210674486" duration="1952000" />
+      <workItem from="1613296228450" duration="9452000" />
+      <workItem from="1613316477807" duration="22150000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="336" y="390" key="#SQL_Dialects" timestamp="1613337812369">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="336" y="390" key="#SQL_Dialects/0.30.1920.1050@0.30.1920.1050" timestamp="1613337812369" />
+    <state x="-3426" y="-102" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612358784289">
+      <screen x="-3840" y="-281" width="1920" height="1050" />
+    </state>
+    <state x="-3426" y="-102" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-3840.-281.1920.1050" timestamp="1612358784289" />
+    <state x="-1195" y="34" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612292185598">
+      <screen x="-1920" y="-280" width="1920" height="1050" />
+    </state>
+    <state x="-1195" y="34" key="#com.intellij.fileTypes.FileTypeChooser/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612292185598" />
+    <state x="4584" y="-268" key="#com.intellij.ide.util.MemberChooser" timestamp="1613330012207">
+      <screen x="3840" y="-500" width="1920" height="1050" />
+    </state>
+    <state x="-1176" y="-48" key="#com.intellij.ide.util.MemberChooser/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612348349023" />
+    <state x="2664" y="-260" key="#com.intellij.ide.util.MemberChooser/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613321250607" />
+    <state x="4584" y="-268" key="#com.intellij.ide.util.MemberChooser/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613330012207" />
+    <state x="767" y="141" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613334674241">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="-1153" y="-169" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612274321437" />
+    <state x="767" y="141" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1613334674241" />
+    <state x="4530" y="-221" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613329148477">
+      <screen x="3840" y="-500" width="1920" height="1050" />
+    </state>
+    <state x="-1230" y="-1" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612289323000" />
+    <state x="4530" y="-221" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613329148477" />
+    <state x="4563" y="-65" key="ComposerInitDialogKey" timestamp="1613312978454">
+      <screen x="3840" y="-500" width="1920" height="1050" />
+    </state>
+    <state x="4563" y="-65" key="ComposerInitDialogKey/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613312978454" />
+    <state x="92" y="122" width="1736" height="866" key="DiffContextDialog" timestamp="1613334575586">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="-1828" y="-188" width="1736" height="866" key="DiffContextDialog/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612349075744" />
+    <state x="3932" y="-408" width="1736" height="866" key="DiffContextDialog/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613331186467" />
+    <state x="92" y="122" width="1736" height="866" key="DiffContextDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1613334575586" />
+    <state x="2660" y="-213" key="FileChooserDialogImpl" timestamp="1613317447357">
+      <screen x="1920" y="-492" width="1920" height="1050" />
+    </state>
+    <state x="-1180" y="-1" key="FileChooserDialogImpl/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612294194205" />
+    <state x="-3100" y="-2" key="FileChooserDialogImpl/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-3840.-281.1920.1050" timestamp="1612351010118" />
+    <state x="2660" y="-213" key="FileChooserDialogImpl/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613317447357" />
+    <state width="1293" height="278" key="GridCell.Tab.0.bottom" timestamp="1613339097342">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1293" height="278" key="GridCell.Tab.0.bottom/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612346743958" />
+    <state width="1293" height="278" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1613339097342" />
+    <state width="1293" height="278" key="GridCell.Tab.0.center" timestamp="1613339097342">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1293" height="278" key="GridCell.Tab.0.center/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612346743958" />
+    <state width="1293" height="278" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1613339097342" />
+    <state width="1293" height="278" key="GridCell.Tab.0.left" timestamp="1613339097342">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1293" height="278" key="GridCell.Tab.0.left/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612346743958" />
+    <state width="1293" height="278" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1613339097342" />
+    <state width="1293" height="278" key="GridCell.Tab.0.right" timestamp="1613339097342">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1293" height="278" key="GridCell.Tab.0.right/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612346743958" />
+    <state width="1293" height="278" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1613339097342" />
+    <state x="-1736" y="-194" key="MergeDialog" timestamp="1612282380285">
+      <screen x="-1920" y="-280" width="1920" height="1050" />
+    </state>
+    <state x="-1736" y="-194" key="MergeDialog/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612282380285" />
+    <state x="-1330" y="-2" key="MultipleFileMergeDialog" timestamp="1612282380296">
+      <screen x="-1920" y="-280" width="1920" height="1050" />
+    </state>
+    <state x="-1330" y="-2" key="MultipleFileMergeDialog/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612282380296" />
+    <state x="656" y="261" key="NewPhpClassDialog" timestamp="1613340583763">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="-1264" y="-49" key="NewPhpClassDialog/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612288736853" />
+    <state x="4496" y="-269" key="NewPhpClassDialog/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613329114561" />
+    <state x="656" y="261" key="NewPhpClassDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1613340583763" />
+    <state x="-3046" y="163" key="NewPhpFileDialog" timestamp="1612884814062">
+      <screen x="-3840" y="-281" width="1920" height="1050" />
+    </state>
+    <state x="-3046" y="163" key="NewPhpFileDialog/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-3840.-281.1920.1050" timestamp="1612884814062" />
+    <state x="-1459" y="-111" key="SettingsEditor" timestamp="1612347440826">
+      <screen x="-1920" y="-280" width="1920" height="1050" />
+    </state>
+    <state x="-1459" y="-111" key="SettingsEditor/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612347440826" />
+    <state x="721" y="206" key="VcsDiffUtil.ChangesDialog" timestamp="1613334568101">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="4561" y="-324" key="VcsDiffUtil.ChangesDialog/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613316794363" />
+    <state x="721" y="206" key="VcsDiffUtil.ChangesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1613334568101" />
+    <state x="1979" y="-379" width="1736" height="866" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1613315866162">
+      <screen x="1920" y="-492" width="1920" height="1050" />
+    </state>
+    <state x="1979" y="-379" width="1736" height="866" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613315866162" />
+    <state x="2022" y="-422" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1613316880456">
+      <screen x="1920" y="-492" width="1920" height="1050" />
+    </state>
+    <state x="2012" y="-400" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613305933478" />
+    <state x="2022" y="-422" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613316880456" />
+    <state x="777" y="464" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613338810078">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="-1143" y="154" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612289917889" />
+    <state x="777" y="464" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1920.1050@0.30.1920.1050" timestamp="1613338810078" />
+    <state x="668" y="130" width="583" height="849" key="find.popup" timestamp="1613340841096">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="-1252" y="-180" width="583" height="849" key="find.popup/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612339783209" />
+    <state x="-3172" y="-181" width="583" height="849" key="find.popup/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-3840.-281.1920.1050" timestamp="1612359130618" />
+    <state x="4508" y="-400" width="583" height="849" key="find.popup/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613316867925" />
+    <state x="668" y="130" width="583" height="849" key="find.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1613340841096" />
+    <state x="4463" y="-273" width="672" height="678" key="search.everywhere.popup" timestamp="1613314359493">
+      <screen x="3840" y="-500" width="1920" height="1050" />
+    </state>
+    <state x="-1297" y="-53" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612281710661" />
+    <state x="4463" y="-273" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613314359493" />
+  </component>
+</project>
