@@ -47,8 +47,8 @@ DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
 ```
 3) Create the database : 
 ```
-bin/console doctrine:database:create
-bin/console doctrine:schema:create
+php bin/console doctrine:database:create
+php bin/console doctrine:schema:create
 ```
 2) Then, run the application : ` symfony server:start ` 
 3) Navigate in the swagger to [http://localhost:8000/api](http://localhost:8000/api) .
