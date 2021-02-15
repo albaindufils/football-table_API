@@ -9,7 +9,12 @@ use Symfony\Component\Serializer\Annotation\Groups;
 /**
  * @ApiResource(
  *     normalizationContext={"groups"={"player:read"}},
- *     denormalizationContext={"groups"={"player:write"}}
+ *     denormalizationContext={"groups"={"player:write"}},
+ *     itemOperations={
+ *          "get",
+ *          "put"
+ *     }
+ *
  * )
  * @ORM\Entity
  */

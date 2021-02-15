@@ -20,29 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de131ac8-d75b-46f7-b5ed-5eb7dfe39206" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/TeamRankingController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/TeamRanking.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/TeamRankingRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/GameController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PlayerController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TeamController.php" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/GetGamesByPlayer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/PlayerRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/table-football_API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/table-football_API.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Game.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Team.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Team.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/GameRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/GameRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PlayerRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/TeamRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,6 +176,7 @@
       <workItem from="1613210674486" duration="1952000" />
       <workItem from="1613296228450" duration="9452000" />
       <workItem from="1613316477807" duration="22150000" />
+      <workItem from="1613375691226" duration="12318000" />
     </task>
     <servers />
   </component>
@@ -234,19 +219,20 @@
     </state>
     <state x="-1153" y="-169" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612274321437" />
     <state x="767" y="141" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1613334674241" />
-    <state x="4530" y="-221" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613329148477">
+    <state x="4530" y="-221" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613385036043">
       <screen x="3840" y="-500" width="1920" height="1050" />
     </state>
     <state x="-1230" y="-1" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612289323000" />
-    <state x="4530" y="-221" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613329148477" />
+    <state x="4530" y="-221" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613385036043" />
     <state x="4563" y="-65" key="ComposerInitDialogKey" timestamp="1613312978454">
       <screen x="3840" y="-500" width="1920" height="1050" />
     </state>
     <state x="4563" y="-65" key="ComposerInitDialogKey/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613312978454" />
-    <state x="92" y="122" width="1736" height="866" key="DiffContextDialog" timestamp="1613334575586">
-      <screen x="0" y="30" width="1920" height="1050" />
+    <state x="2012" y="-400" width="1736" height="866" key="DiffContextDialog" timestamp="1613382696534">
+      <screen x="1920" y="-492" width="1920" height="1050" />
     </state>
     <state x="-1828" y="-188" width="1736" height="866" key="DiffContextDialog/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612349075744" />
+    <state x="2012" y="-400" width="1736" height="866" key="DiffContextDialog/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613382696534" />
     <state x="3932" y="-408" width="1736" height="866" key="DiffContextDialog/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613331186467" />
     <state x="92" y="122" width="1736" height="866" key="DiffContextDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1613334575586" />
     <state x="2660" y="-213" key="FileChooserDialogImpl" timestamp="1613317447357">
@@ -255,25 +241,33 @@
     <state x="-1180" y="-1" key="FileChooserDialogImpl/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612294194205" />
     <state x="-3100" y="-2" key="FileChooserDialogImpl/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-3840.-281.1920.1050" timestamp="1612351010118" />
     <state x="2660" y="-213" key="FileChooserDialogImpl/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613317447357" />
-    <state width="1293" height="278" key="GridCell.Tab.0.bottom" timestamp="1613339097342">
-      <screen x="0" y="30" width="1920" height="1050" />
+    <state width="1293" height="444" key="GridCell.Tab.0.bottom" timestamp="1613398529120">
+      <screen x="1920" y="-492" width="1920" height="1050" />
     </state>
     <state width="1293" height="278" key="GridCell.Tab.0.bottom/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612346743958" />
+    <state width="1293" height="444" key="GridCell.Tab.0.bottom/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613398529120" />
+    <state width="1293" height="444" key="GridCell.Tab.0.bottom/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613385024283" />
     <state width="1293" height="278" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1613339097342" />
-    <state width="1293" height="278" key="GridCell.Tab.0.center" timestamp="1613339097342">
-      <screen x="0" y="30" width="1920" height="1050" />
+    <state width="1293" height="444" key="GridCell.Tab.0.center" timestamp="1613398529120">
+      <screen x="1920" y="-492" width="1920" height="1050" />
     </state>
     <state width="1293" height="278" key="GridCell.Tab.0.center/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612346743958" />
+    <state width="1293" height="444" key="GridCell.Tab.0.center/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613398529120" />
+    <state width="1293" height="444" key="GridCell.Tab.0.center/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613385024283" />
     <state width="1293" height="278" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1613339097342" />
-    <state width="1293" height="278" key="GridCell.Tab.0.left" timestamp="1613339097342">
-      <screen x="0" y="30" width="1920" height="1050" />
+    <state width="1293" height="444" key="GridCell.Tab.0.left" timestamp="1613398529120">
+      <screen x="1920" y="-492" width="1920" height="1050" />
     </state>
     <state width="1293" height="278" key="GridCell.Tab.0.left/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612346743958" />
+    <state width="1293" height="444" key="GridCell.Tab.0.left/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613398529120" />
+    <state width="1293" height="444" key="GridCell.Tab.0.left/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613385024283" />
     <state width="1293" height="278" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1613339097342" />
-    <state width="1293" height="278" key="GridCell.Tab.0.right" timestamp="1613339097342">
-      <screen x="0" y="30" width="1920" height="1050" />
+    <state width="1293" height="444" key="GridCell.Tab.0.right" timestamp="1613398529120">
+      <screen x="1920" y="-492" width="1920" height="1050" />
     </state>
     <state width="1293" height="278" key="GridCell.Tab.0.right/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612346743958" />
+    <state width="1293" height="444" key="GridCell.Tab.0.right/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613398529120" />
+    <state width="1293" height="444" key="GridCell.Tab.0.right/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613385024283" />
     <state width="1293" height="278" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1613339097342" />
     <state x="-1736" y="-194" key="MergeDialog" timestamp="1612282380285">
       <screen x="-1920" y="-280" width="1920" height="1050" />
@@ -297,11 +291,17 @@
       <screen x="-1920" y="-280" width="1920" height="1050" />
     </state>
     <state x="-1459" y="-111" key="SettingsEditor/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612347440826" />
-    <state x="721" y="206" key="VcsDiffUtil.ChangesDialog" timestamp="1613334568101">
-      <screen x="0" y="30" width="1920" height="1050" />
+    <state x="2641" y="-316" key="VcsDiffUtil.ChangesDialog" timestamp="1613382413276">
+      <screen x="1920" y="-492" width="1920" height="1050" />
     </state>
+    <state x="2641" y="-316" key="VcsDiffUtil.ChangesDialog/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613382413276" />
     <state x="4561" y="-324" key="VcsDiffUtil.ChangesDialog/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613316794363" />
     <state x="721" y="206" key="VcsDiffUtil.ChangesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1613334568101" />
+    <state x="2774" y="-36" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1613396665799">
+      <screen x="1920" y="-492" width="1920" height="1050" />
+    </state>
+    <state x="2774" y="-36" key="com.intellij.database.run.ParametersPanel.Standalone/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613396665799" />
+    <state x="4694" y="-44" key="com.intellij.database.run.ParametersPanel.Standalone/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613386466124" />
     <state x="1979" y="-379" width="1736" height="866" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1613315866162">
       <screen x="1920" y="-492" width="1920" height="1050" />
     </state>
@@ -316,17 +316,22 @@
     </state>
     <state x="-1143" y="154" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612289917889" />
     <state x="777" y="464" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1920.1050@0.30.1920.1050" timestamp="1613338810078" />
-    <state x="668" y="130" width="583" height="849" key="find.popup" timestamp="1613340841096">
-      <screen x="0" y="30" width="1920" height="1050" />
+    <state x="4508" y="-400" width="583" height="849" key="find.popup" timestamp="1613384942423">
+      <screen x="3840" y="-500" width="1920" height="1050" />
     </state>
     <state x="-1252" y="-180" width="583" height="849" key="find.popup/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612339783209" />
     <state x="-3172" y="-181" width="583" height="849" key="find.popup/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-3840.-281.1920.1050" timestamp="1612359130618" />
-    <state x="4508" y="-400" width="583" height="849" key="find.popup/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613316867925" />
+    <state x="4508" y="-400" width="583" height="849" key="find.popup/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613384942423" />
     <state x="668" y="130" width="583" height="849" key="find.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1613340841096" />
-    <state x="4463" y="-273" width="672" height="678" key="search.everywhere.popup" timestamp="1613314359493">
-      <screen x="3840" y="-500" width="1920" height="1050" />
+    <state x="2536" y="-3" key="run.anything.popup" timestamp="1613380171829">
+      <screen x="1920" y="-492" width="1920" height="1050" />
+    </state>
+    <state x="2536" y="-3" key="run.anything.popup/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613380171829" />
+    <state x="2543" y="-265" width="672" height="678" key="search.everywhere.popup" timestamp="1613379883678">
+      <screen x="1920" y="-492" width="1920" height="1050" />
     </state>
     <state x="-1297" y="-53" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612281710661" />
+    <state x="2543" y="-265" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613379883678" />
     <state x="4463" y="-273" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613314359493" />
   </component>
 </project>

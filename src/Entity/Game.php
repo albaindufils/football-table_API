@@ -10,6 +10,22 @@ use Symfony\Component\Serializer\Annotation\Groups;
  * @ApiResource(
  *     normalizationContext={"groups"={"game:read", "team:read"}},
  *     denormalizationContext={"groups"={"game:write"}},
+ *     itemOperations={
+ *          "get",
+ *          "put",
+ *          "get_games"={
+ *              "route_name"="get_games_by_player",
+ *              "openapi_context"= {
+ *                  "summary"="Retrieve the collection of Game depending the player ID"
+ *              }
+ *          },
+ *          "get_games_team"={
+ *              "route_name"="get_games_by_team",
+ *              "openapi_context"= {
+ *                  "summary"="Retrieve the collection of Game depending the team ID"
+ *              }
+ *          }
+ *     }
  * )
  * @ORM\Entity
  */

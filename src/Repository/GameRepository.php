@@ -21,9 +21,54 @@ class GameRepository extends ServiceEntityRepository
     }
 
 
+    public function getGamesByPlayer($id)
+    {
+        $conn = $this->getEntityManager()->getConnection();
+        $sql = '
+            select id, (select name from team where id = playerGames.team_home_id) as team_home, (select name from team where id = playerGames.team_away_id) as team_away, score_home, score_away, datetime
+            from (
+                     select g1.*
+                     from game g1 inner join team t on t.id = g1.team_away_id
+                     where t.player1_id = :id or t.player2_id = :id
+                     union
+                     select g2.*
+                     from game g2 inner join team t on t.id = g2.team_home_id
+                     where t.player1_id = :id or t.player2_id = :id
+                 ) playerGames
+            group by playerGames.id;
+        ';
+        try {
+            $stmt = $conn->prepare($sql);
+            $stmt->execute(['id' => $id]);
+            return $stmt->fetchAllAssociative();
+        } catch (Exception $e) {
+            throw new \Exception('Error while getting games from players');
+        }
 
-    // /**
-    //  */
+
+    }
+
+    public function getGamesByTeam($id)
+    {
+        $conn = $this->getEntityManager()->getConnection();
+        $sql = '
+            select game.id as id, game.datetime as datetime, game.score_away, game.score_home, t.name as team_home, t2.name as team_away
+            from game
+            inner join team t on t.id = game.team_home_id
+            inner join team t2 on t2.id = game.team_away_id
+            where game.team_away_id = :id or game.team_home_id = :id
+        ';
+        try {
+            $stmt = $conn->prepare($sql);
+            $stmt->execute(['id' => $id]);
+            return $stmt->fetchAllAssociative();
+        } catch (Exception $e) {
+            throw new \Exception('Error while getting games from players');
+        }
+
+
+    }
+
     public function getTeamRanking()
     {
         $conn = $this->getEntityManager()->getConnection();
