@@ -25,15 +25,31 @@ This web API is used to monitor the internal football table championship.
 - [ ] Test the API
 - [ ] Better management of model mapping (Serialization)
 - [ ] Set custom controllers for each entity 
-- [ ] Dockerfile to be done
+- [ ] Docker run file
+- [ ] Https support
+- [ ] User login management
 
 ## How to run ths project
 
-All the dependencies are available in the `composer.json` file.
+All dependencies are available in the `composer.json` file.
 
 Before all, you need to install [Symfony](https://symfony.com/download) and [composer](https://getcomposer.org/download/). 
 
-1) First, you need to install packages : ` composer install ` 
+1) Clone the repository and install packages : 
+```
+git clone https://github.com/albaindufils/table-football_API.git
+cd table-football_API
+composer install
+```
+2) Be sure that the **.env** exists and the DATABASE_URL is configured : 
+```
+DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
+```
+3) Create the database : 
+```
+bin/console doctrine:database:create
+bin/console doctrine:schema:create
+```
 2) Then, run the application : ` symfony server:start ` 
-3) Navigate in the swagger to [http://localhost:8000/api](http://localhost:8000/api)
+3) Navigate in the swagger to [http://localhost:8000/api](http://localhost:8000/api) .
 To stop the web api, run : ` symfony server:stop ` 
