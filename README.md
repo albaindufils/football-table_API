@@ -25,6 +25,7 @@ This web API is used to monitor the internal football table championship.
 - [ ] Test the API
 - [ ] Better management of model mapping (Serialization)
 - [ ] Set custom controllers for each entity 
+- [ ] Dockerfile to be done
 
 ## How to run ths project
 
