@@ -20,13 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de131ac8-d75b-46f7-b5ed-5eb7dfe39206" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/GetGamesByPlayer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/PlayerRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/table-football_API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/table-football_API.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/db.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Player.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/GameRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/GameRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,11 +141,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Albain\REPOSITORY\PRIVATE\Audacia\table-football_API\images" />
       <recent name="C:\Users\Albain\REPOSITORY\PRIVATE\Audacia\table-football_API\src\Controller" />
       <recent name="C:\Users\Albain\REPOSITORY\PRIVATE\Audacia\table-football_API\src\Controller\Team" />
       <recent name="C:\Users\Albain\REPOSITORY\PRIVATE\Audacia\table-football_API\src\Controller\Player" />
       <recent name="C:\Users\Albain\REPOSITORY\PRIVATE\Audacia\table-football_API\src\Controller\Game" />
-      <recent name="C:\Users\Albain\REPOSITORY\PRIVATE\Audacia\table-football_API\src\Entity\old" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -176,7 +172,7 @@
       <workItem from="1613210674486" duration="1952000" />
       <workItem from="1613296228450" duration="9452000" />
       <workItem from="1613316477807" duration="22150000" />
-      <workItem from="1613375691226" duration="12318000" />
+      <workItem from="1613375691226" duration="14755000" />
     </task>
     <servers />
   </component>
@@ -241,32 +237,32 @@
     <state x="-1180" y="-1" key="FileChooserDialogImpl/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612294194205" />
     <state x="-3100" y="-2" key="FileChooserDialogImpl/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-3840.-281.1920.1050" timestamp="1612351010118" />
     <state x="2660" y="-213" key="FileChooserDialogImpl/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613317447357" />
-    <state width="1293" height="444" key="GridCell.Tab.0.bottom" timestamp="1613398529120">
+    <state width="1293" height="444" key="GridCell.Tab.0.bottom" timestamp="1613398758517">
       <screen x="1920" y="-492" width="1920" height="1050" />
     </state>
     <state width="1293" height="278" key="GridCell.Tab.0.bottom/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612346743958" />
-    <state width="1293" height="444" key="GridCell.Tab.0.bottom/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613398529120" />
+    <state width="1293" height="444" key="GridCell.Tab.0.bottom/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613398758517" />
     <state width="1293" height="444" key="GridCell.Tab.0.bottom/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613385024283" />
     <state width="1293" height="278" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1613339097342" />
-    <state width="1293" height="444" key="GridCell.Tab.0.center" timestamp="1613398529120">
+    <state width="1293" height="444" key="GridCell.Tab.0.center" timestamp="1613398758517">
       <screen x="1920" y="-492" width="1920" height="1050" />
     </state>
     <state width="1293" height="278" key="GridCell.Tab.0.center/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612346743958" />
-    <state width="1293" height="444" key="GridCell.Tab.0.center/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613398529120" />
+    <state width="1293" height="444" key="GridCell.Tab.0.center/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613398758517" />
     <state width="1293" height="444" key="GridCell.Tab.0.center/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613385024283" />
     <state width="1293" height="278" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1613339097342" />
-    <state width="1293" height="444" key="GridCell.Tab.0.left" timestamp="1613398529120">
+    <state width="1293" height="444" key="GridCell.Tab.0.left" timestamp="1613398758516">
       <screen x="1920" y="-492" width="1920" height="1050" />
     </state>
     <state width="1293" height="278" key="GridCell.Tab.0.left/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612346743958" />
-    <state width="1293" height="444" key="GridCell.Tab.0.left/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613398529120" />
+    <state width="1293" height="444" key="GridCell.Tab.0.left/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613398758516" />
     <state width="1293" height="444" key="GridCell.Tab.0.left/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613385024283" />
     <state width="1293" height="278" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1613339097342" />
-    <state width="1293" height="444" key="GridCell.Tab.0.right" timestamp="1613398529120">
+    <state width="1293" height="444" key="GridCell.Tab.0.right" timestamp="1613398758517">
       <screen x="1920" y="-492" width="1920" height="1050" />
     </state>
     <state width="1293" height="278" key="GridCell.Tab.0.right/0.30.1920.1050/-3840.-281.1920.1050/-1920.-280.1920.1050@-1920.-280.1920.1050" timestamp="1612346743958" />
-    <state width="1293" height="444" key="GridCell.Tab.0.right/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613398529120" />
+    <state width="1293" height="444" key="GridCell.Tab.0.right/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@1920.-492.1920.1050" timestamp="1613398758517" />
     <state width="1293" height="444" key="GridCell.Tab.0.right/0.30.1920.1050/1920.-492.1920.1050/3840.-500.1920.1050@3840.-500.1920.1050" timestamp="1613385024283" />
     <state width="1293" height="278" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1613339097342" />
     <state x="-1736" y="-194" key="MergeDialog" timestamp="1612282380285">
